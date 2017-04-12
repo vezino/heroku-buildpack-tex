@@ -81,7 +81,7 @@ fi
 
 tlmgr option repository ftp://tug.org/historic/systems/texlive/2012/tlnet-final
 
-tlmgr update --self
+# tlmgr update --self
 
 # install user-provided-packages
 if [ -f $BUILD_DIR/texlive.packages ]; then
