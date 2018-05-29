@@ -79,7 +79,7 @@ if [ ! `which pdflatex` ]; then
     ./install-tl --profile=$PROF
 fi
 
-tlmgr update --self --all
+tlmgr update --self
 
 # install user-provided-packages
 if [ -f $BUILD_DIR/texlive.packages ]; then
@@ -88,7 +88,9 @@ if [ -f $BUILD_DIR/texlive.packages ]; then
 fi
 
 build-step "upgrading installed packages"
-tlmgr update --all
+# comment this an replace acording instructions
+#tlmgr update --all
+update-tlmgr-latest.sh --update
 
 build-step "cleanup"
 rm -rf $TEXLIVE_HOME/texmf-dist/doc
