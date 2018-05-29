@@ -86,7 +86,7 @@ wget http://ctan.scidock.com/tex-archive/systems/texlive/tlnet/update-tlmgr-late
 echo `which update-tlmgr-latest.sh`
 chmod +x ./update-tlmgr-latest.sh
 echo `which update-tlmgr-latest.sh`
-./update-tlmgr-latest.sh --update
+./update-tlmgr-latest.sh
 #echo "******************"
 #echo "****************** Begin wget"
 #wget http://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.sh
