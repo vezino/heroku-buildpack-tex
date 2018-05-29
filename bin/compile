@@ -86,6 +86,7 @@ fi
 #chmod +x update-tlmgr-latest.sh
 #echo "****************** After wget"
 #./update-tlmgr-latest.sh -- --upgrade
+build-step "update packages with version"
 tlmgr update --all
 
 # install user-provided-packages
