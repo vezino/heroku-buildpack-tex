@@ -79,7 +79,7 @@ if [ ! `which pdflatex` ]; then
     ./install-tl --profile=$PROF
 fi
 
-tlmgr update --self
+tlmgr update --self --all
 
 # install user-provided-packages
 if [ -f $BUILD_DIR/texlive.packages ]; then
