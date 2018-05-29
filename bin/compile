@@ -80,13 +80,19 @@ if [ ! `which pdflatex` ]; then
     echo "******************"
 fi
 
+build-step "update packages with version"
+cd $TEXLIVE_HOME
+curl http://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.sh
+chmod +x update-tlmgr-latest
+echo which update-tlmgr-latest.sh
+update-tlmgr-latest.sh --update
 #echo "******************"
 #echo "****************** Begin wget"
 #wget http://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.sh
 #chmod +x update-tlmgr-latest.sh
 #echo "****************** After wget"
 #./update-tlmgr-latest.sh -- --upgrade
-build-step "update packages with version"
+
 tlmgr update --all
 
 # install user-provided-packages
