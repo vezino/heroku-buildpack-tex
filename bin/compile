@@ -90,7 +90,7 @@ fi
 
 # install user-provided-packages
 if [ -f $BUILD_DIR/texlive.packages ]; then
-    build-step "installed custom packages"
+    build-step "installed custom packages 2"
     tlmgr install $(cat $BUILD_DIR/texlive.packages)
 fi
 
