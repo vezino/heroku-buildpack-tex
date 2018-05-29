@@ -79,6 +79,8 @@ if [ ! `which pdflatex` ]; then
     ./install-tl --profile=$PROF
 fi
 
+echo "******************"
+echo $PATH
 sh update-tlmgr-latest.sh -- --upgrade
 #tlmgr update --self
 
