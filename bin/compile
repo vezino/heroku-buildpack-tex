@@ -80,7 +80,7 @@ if [ ! `which pdflatex` ]; then
 fi
 
 echo "******************"
-echo $PATH
+echo $BUILD_DIR
 sh update-tlmgr-latest.sh -- --upgrade
 #tlmgr update --self
 
