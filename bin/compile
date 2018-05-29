@@ -86,7 +86,7 @@ fi
 #chmod +x update-tlmgr-latest.sh
 #echo "****************** After wget"
 #./update-tlmgr-latest.sh -- --upgrade
-#tlmgr update --all
+tlmgr update --all
 
 # install user-provided-packages
 if [ -f $BUILD_DIR/texlive.packages ]; then
