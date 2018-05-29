@@ -77,12 +77,16 @@ if [ ! `which pdflatex` ]; then
     cd $TEXLIVE_HOME 
 
     ./install-tl --profile=$PROF
+    echo "******************"
 fi
 
-echo "******************"
-echo $BUILD_DIR
-sh update-tlmgr-latest.sh -- --upgrade
-#tlmgr update --self
+#echo "******************"
+#echo "****************** Begin wget"
+#wget http://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.sh
+#chmod +x update-tlmgr-latest.sh
+#echo "****************** After wget"
+#./update-tlmgr-latest.sh -- --upgrade
+tlmgr update --self
 
 # install user-provided-packages
 if [ -f $BUILD_DIR/texlive.packages ]; then
