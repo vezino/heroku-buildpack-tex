@@ -96,7 +96,7 @@ fi
 
 build-step "upgrading installed packages"
 # comment this an replace acording instructions
-tlmgr update --all
+#tlmgr update --all
 #update-tlmgr-latest.sh --update
 
 build-step "cleanup"
