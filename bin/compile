@@ -83,9 +83,9 @@ fi
 build-step "update packages with version"
 cd $TEXLIVE_HOME
 wget http://ctan.scidock.com/tex-archive/systems/texlive/tlnet/update-tlmgr-latest.sh
-echo which update-tlmgr-latest.sh
+echo `which update-tlmgr-latest.sh`
 chmod +x ./update-tlmgr-latest.sh
-echo which update-tlmgr-latest.sh
+echo `which update-tlmgr-latest.sh`
 ./update-tlmgr-latest.sh --update
 #echo "******************"
 #echo "****************** Begin wget"
