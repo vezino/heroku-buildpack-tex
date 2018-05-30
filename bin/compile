@@ -94,7 +94,7 @@ build-step "update packages with version"
 #echo "****************** After wget"
 #./update-tlmgr-latest.sh -- --upgrade
 
-tlmgr update --all
+#tlmgr update --all
 
 # install user-provided-packages
 if [ -f $BUILD_DIR/texlive.packages ]; then
