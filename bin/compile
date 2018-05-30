@@ -100,7 +100,7 @@ build-step "update packages with version"
 if [ -f $BUILD_DIR/texlive.packages ]; then
     build-step "installed custom packages 2"
     echo $BUILD_DIR
-    tlmgr install $(cat $BUILD_DIR/texlive.packages)
+    #tlmgr install $(cat $BUILD_DIR/texlive.packages)
 fi
 
 build-step "upgrading installed packages 2"
