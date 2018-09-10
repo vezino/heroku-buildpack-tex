@@ -88,7 +88,7 @@ if [ -f $BUILD_DIR/texlive.packages ]; then
 fi
 
 build-step "upgrading installed packages"
-tlmgr update --all
+tlmgr update --all --exclude hyphen-german
 
 build-step "cleanup"
 rm -rf $TEXLIVE_HOME/texmf-dist/doc
