@@ -74,14 +74,15 @@ tlmgr option repository "$TEXLIVE_REPOSITORY"
 tlmgr update --self
 
 # install user-provided-packages
-if [ -f "$BUILD_DIR/../conf/texlive.packages" ]; then
+if [ -f "$BUILD_DIR/conf/texlive.packages" ]; then
     build-step "Installing custom packages..."
     # shellcheck disable=SC2046
     tlmgr install $(cat "$BUILD_DIR/texlive.packages")
 fi
 
-build-step "Installing custom packages..."
-tlmgr install $(cat "$BUILD_DIR/texlive.packages")
+#build-step "Installing custom packages..."
+#pwd
+#tlmgr install $(cat "$BUILD_DIR/conf/texlive.packages")
 
 build-step "upgrading installed packages"
 tlmgr update --all --exclude hyphen-german
