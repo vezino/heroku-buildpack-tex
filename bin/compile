@@ -80,6 +80,9 @@ if [ -f "$BUILD_DIR/../conf/texlive.packages" ]; then
     tlmgr install $(cat "$BUILD_DIR/texlive.packages")
 fi
 
+build-step "Installing custom packages..."
+tlmgr install $(cat "$BUILD_DIR/texlive.packages")
+
 build-step "upgrading installed packages"
 tlmgr update --all --exclude hyphen-german
 
